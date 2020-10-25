@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   built_in.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cdelicia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/24 13:27:34 by kcedra            #+#    #+#             */
-/*   Updated: 2020/10/24 16:52:44 by kcedra           ###   ########.fr       */
+/*   Updated: 2020/10/25 03:46:15 by cdelicia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void			echo(char **cur_command)
 		ft_putstr_fd(cur_command[i], 1);
 		i++;
 	}
+	write(1, "\n", 1);
 }
 
 void			pwd()
