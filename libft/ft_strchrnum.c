@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchrnum.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cdelicia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/24 16:38:50 by kcedra            #+#    #+#             */
-/*   Updated: 2020/10/24 16:39:07 by kcedra           ###   ########.fr       */
+/*   Updated: 2020/11/11 20:32:53 by cdelicia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int		ft_strchrnum(const char *s, int c)
 	}
 	if (c == 0)
 		return (i);
-	return (0);
+	return (-1);
 }

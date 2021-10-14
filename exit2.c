@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   exit2.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdelicia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/08 16:28:04 by cdelicia          #+#    #+#             */
-/*   Updated: 2020/10/26 03:17:18 by cdelicia         ###   ########.fr       */
+/*   Created: 2020/11/11 00:42:35 by cdelicia          #+#    #+#             */
+/*   Updated: 2020/11/11 00:43:20 by cdelicia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "minishell.h"
 
-size_t	ft_strlen(const char *s)
+void	too_many_arguments(t_main *data)
 {
-	size_t count;
+	ft_putstr_fd("too many arguments\n", 2);
+	change_return_env_var(1, data);
+}
 
-	count = 0;
-	if (s)
-	{
-		while (*s != '\0')
-		{
-			count++;
-			s++;
-		}
-	}
-	return (count);
+void	not_valid_identifier(t_main *data)
+{
+	ft_putstr_fd("Not a valid identifier\n", 2);
+	change_return_env_var(1, data);
 }

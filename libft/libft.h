@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kcedra <kcedra@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cdelicia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/06 18:54:29 by cdelicia          #+#    #+#             */
-/*   Updated: 2020/10/24 16:40:06 by kcedra           ###   ########.fr       */
+/*   Updated: 2020/11/11 20:30:59 by cdelicia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);
+char				**ft_split_echo(char *s);
+char				**ft_split_set(char *s, char *set);
 char				*ft_itoa(int n);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_putchar_fd(char c, int fd);
@@ -77,5 +79,6 @@ int					ft_whole_line(char **s, char **line);
 int					ft_cut_line(char **s, char **line, char *n);
 void				*ft_realloc(void *str, size_t size);
 int					ft_strchrnum(const char *s, int c);
+int					check_scope_for_echo(char *start, char *line);
 
 #endif

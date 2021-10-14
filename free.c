@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdelicia <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/08 16:28:04 by cdelicia          #+#    #+#             */
-/*   Updated: 2020/10/26 03:17:18 by cdelicia         ###   ########.fr       */
+/*   Created: 2020/10/26 01:07:47 by cdelicia          #+#    #+#             */
+/*   Updated: 2020/10/26 02:57:45 by cdelicia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "minishell.h"
 
-size_t	ft_strlen(const char *s)
+void	free_all_array_elements(char **arr, int i)
 {
-	size_t count;
-
-	count = 0;
-	if (s)
+	if (arr)
 	{
-		while (*s != '\0')
+		while (i >= 0)
 		{
-			count++;
-			s++;
+			free(arr[i]);
+			i--;
 		}
+		free(arr);
 	}
-	return (count);
 }

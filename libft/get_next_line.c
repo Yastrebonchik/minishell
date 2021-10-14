@@ -19,10 +19,14 @@ int		get_next_line(int fd, char **line)
 	ssize_t		i;
 	char		*line_break;
 
-	if (line == NULL || fd < 0)
-		return (-1);
-	while ((i = read(fd, buf, 31)) > 0)
+	static_buf = NULL;
+	while ((i = read(fd, buf, 31)) >= 0)
 	{
+		if (i == 0 && static_buf == NULL)
+		{
+			ft_putstr_fd("exit\n", 1);
+			exit(0);
+		}
 		buf[i] = '\0';
 		static_buf = gnl_strjoin(static_buf, buf);
 		if ((line_break = gnl_strchr(static_buf, '\n')) != NULL)
