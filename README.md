@@ -1,1 +1,1 @@
-In the current project the simple command prompt is realised.
+In the current project the simple command prompt is realised. To start a program use an executable "minishell" (Makefile is presented and default rule builds the project) with config file as it's argument. Works on MacOs (on Linux systems may have problems).
